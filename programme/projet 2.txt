@@ -1,0 +1,23 @@
+#include <stdio.h>
+void f1 (void)
+{ printf ("bonjour\n") ;
+}
+void f2 (int n)
+{ int i ;
+ for (i=0 ; i<n ; i++)
+ printf ("bonjour\n") ;
+}
+int f3 (int n)
+{ int i ;
+ for (i=0 ; i<n ; i++)
+ printf ("bonjour\n") ;
+ return 0 ;
+}
+main()
+{ void f1 (void) ;
+ void f2 (int) ;
+ int f3 (int) ;
+ f1 () ;
+ f2 (3) ;
+ f3 (3) ;
+}

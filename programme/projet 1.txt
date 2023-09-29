@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+// Fonction pour démarrer l'application
+void demarrer() {
+    printf("L'application a démarré.\n");
+}
+
+// Fonction pour utiliser l'application
+void utiliser() {
+    printf("L'application est en cours d'utilisation.\n");
+}
+
+int main() {
+    int choix;
+
+    printf("Bienvenue dans l'application.\n");
+
+    while (1) {
+        printf("Menu :\n");
+        printf("1. Démarrer l'application\n");
+        printf("2. Utiliser l'application\n");
+        printf("3. Quitter l'application\n");
+        printf("Entrez votre choix : ");
+        scanf("%d", &choix);
+
+        switch (choix) {
+            case 1:
+                demarrer();
+                break;
+            case 2:
+                utiliser();
+                break;
+            case 3:
+                printf("L'application quitte.\n");
+                return 0;
+            default:
+                printf("Choix non valide. Veuillez réessayer.\n");
+        }
+    }
+
+    return 0;
+}
